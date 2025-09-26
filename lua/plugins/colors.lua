@@ -1,3 +1,4 @@
+if vim.env.C ~= '0' then
 return {
 				{
 				"folke/tokyonight.nvim",
@@ -9,3 +10,6 @@ return {
 				end
 				}
 }
+else 
+  return {}
+end
