@@ -1,9 +1,7 @@
 # My personal NeoVim configuration 
 > But I'll put here complete setup of pc for coding
 It is suitable for WEB development (including react, tailwind, github actions), C++ development (but no debugger) and working in bare tty (linux without gui).
-<br/>
 Plugins: lazy.nvim, tokyonight theme, native lsp, tree-sitter, telescope, harpoon.
-<br/>
 I should notice that on Linux if you want to default colors then run NeoVim as follows:
 "C=0 nvim ." - where "C" - environment variable meaning "COLORS"
 ## Setup on Windows
