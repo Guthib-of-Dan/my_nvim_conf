@@ -13,8 +13,9 @@ return {
       capabilities = capabilities
     })
     vim.lsp.config("jsonls", {
-      capabilities = capabilities
+       capabilities = capabilities
     })
+    vim.lsp.enable('basedpyright')
     vim.lsp.enable("cssls")
     vim.lsp.enable("html")
     vim.lsp.enable("jsonls")
