@@ -24,93 +24,93 @@ I should notice that on Linux if you want to default colors then run NeoVim as f
 > Note: To the left I write editor's mode: i - insert, r - replace, e - explorer netrw, v - visual, t(x) - x is mode before and t is terminal. Also x = any mode;
 ## Folding
 n zR - unfold all folds in file recursively;  
-n zM - fold all folds in file recursively;
-n zr - unfold all folds in file one level;
-n zm - fold all folds in file one level;
-n zo - unfold code under cursor one level;
-n zO - unfold code under cursor recursively;
+n zM - fold all folds in file recursively;  
+n zr - unfold all folds in file one level;  
+n zm - fold all folds in file one level;  
+n zo - unfold code under cursor one level;  
+n zO - unfold code under cursor recursively;  
 n zc - fold code under cursor one level;  
-n zC - fold code under cursor recursively;
-n za - toggle fold under cursor one level;
-n zA - toggle fold under cursor recursively;
+n zC - fold code under cursor recursively;  
+n za - toggle fold under cursor one level;  
+n zA - toggle fold under cursor recursively;  
 
 ## Mode switching, writing, quitting, panes
-n i - Insert mode;
-n v - Visual mode;
-n V - visual line (best way to find cursor);
-x Escape - get to normal mode;
-i Insert - Replace mode;
-r Insert - Insert mode;
-n :Ex - Explorer netrw in same directory;
-e % - new file
-e D - delete file/folder recursively under cursor;
-e R - rename file;
-e '-' - one firectory above (minus sign);
-n :e ... - enter file/folder, adjacent to working directory of NeoVim;
-n :ter - turn current pane into terminal with normal mode;
-t(n) i - Insert mode;
-n or t(n) :q - gracefully close current pane;
-n or t(n) :q! - forcefully close current pane with dropping unsaved changes;
-n :w - save file;
-n :new - create new horizontal pane;
-n :vnew - create new vertical pane;
-n Ctrl+w (and arrow up/down/right/left) - switch to pane on the side, where chosen arrow points;
+n i - Insert mode;  
+n v - Visual mode;  
+n V - visual line (best way to find cursor);  
+x Escape - get to normal mode;  
+i Insert - Replace mode;  
+r Insert - Insert mode;  
+n :Ex - Explorer netrw in same directory;  
+e % - new file  
+e D - delete file/folder recursively under cursor;  
+e R - rename file;  
+e '-' - one firectory above (minus sign);  
+n :e ... - enter file/folder, adjacent to working directory of NeoVim;  
+n :ter - turn current pane into terminal with normal mode;  
+t(n) i - Insert mode;  
+n or t(n) :q - gracefully close current pane;  
+n or t(n) :q! - forcefully close current pane with dropping unsaved changes;  
+n :w - save file;  
+n :new - create new horizontal pane;  
+n :vnew - create new vertical pane;  
+n Ctrl+w (and arrow up/down/right/left) - switch to pane on the side, where chosen arrow points;  
 
 ## Editing, moving in file
-n a - insert mode, but move one symbol to right;
-n A - insert mode, but move to the end of line;
-n I - insert mode, but move to the start of line;
-n s - insert mode, but remove symbol under cursor
-v s - insert mode, but remove all selected symbols;
-n S - insert mode, but remove whole line;
-n gg - move to file start;
-n G - move to file end;
-n f(something) - move cursor to (something) - one symbol;
-n dd - delete whole line;
-n df(something) - delete up to (something) - one symbol;
-n 0 (as zero) - move to line beginning;
-n ^ - move to first non-whitespace symbol in line;
-n $ - move to line end;
-n w - move to next word (special symbols also count as stop points);
-n dw - delete everything up to next word;
-n diW - delete evrything around cursor up to whitespaces;
-n viW - select everything around cursor up to whitespaces;
-n o - create new line below cursor and go to insert mode there;
-n O - create new line above cursor and go to insert mode there;
-n zz - move pane (not pane!), so that cursor was in the middle of it;
-n Ctrl+d - scroll one height of pane to bottom;
-n Ctrl+u - scroll one height of pane to top;
-n u - undo last change (like Ctrl+z in vscode);
-n Ctrl+r - undo undone change (like Ctrl+y in vscode);
-n /(pattern) - highlight pattern in file;
-n n - move to next highlighted occurence;
-n N - move to previous highlighted occurence;
-:noh - unhighlight highlighted text;
-v :s/(phrase)/(replacement) - replace within selected text (phrase) with (replacement)
-n x - delete one symbol under cursor;
-n qq - record all commands used afterwards. To stop - press q;
-n Q - use all recorded commands on the current line;
+n a - insert mode, but move one symbol to right;  
+n A - insert mode, but move to the end of line;  
+n I - insert mode, but move to the start of line;  
+n s - insert mode, but remove symbol under cursor  
+v s - insert mode, but remove all selected symbols;  
+n S - insert mode, but remove whole line;  
+n gg - move to file start;  
+n G - move to file end;  
+n f(something) - move cursor to (something) - one symbol;  
+n dd - delete whole line;  
+n df(something) - delete up to (something) - one symbol;  
+n 0 (as zero) - move to line beginning;  
+n ^ - move to first non-whitespace symbol in line;  
+n $ - move to line end;  
+n w - move to next word (special symbols also count as stop points);  
+n dw - delete everything up to next word;  
+n diW - delete evrything around cursor up to whitespaces;  
+n viW - select everything around cursor up to whitespaces;  
+n o - create new line below cursor and go to insert mode there;  
+n O - create new line above cursor and go to insert mode there;  
+n zz - move pane (not pane!), so that cursor was in the middle of it;  
+n Ctrl+d - scroll one height of pane to bottom;  
+n Ctrl+u - scroll one height of pane to top;  
+n u - undo last change (like Ctrl+z in vscode);  
+n Ctrl+r - undo undone change (like Ctrl+y in vscode);  
+n /(pattern) - highlight pattern in file;  
+n n - move to next highlighted occurence;  
+n N - move to previous highlighted occurence;  
+:noh - unhighlight highlighted text;  
+v :s/(phrase)/(replacement) - replace within selected text (phrase) with (replacement)  
+n x - delete one symbol under cursor;  
+n qq - record all commands used afterwards. To stop - press q;  
+n Q - use all recorded commands on the current line;  
 
 ## Copy-paste
-v y - copy selected text;
-v p - paste after cursor;
-v P - paste before cursor
-v "+y - copy selected text to system clipboard
-n "+p - paste after cursor from global clipboard;
-n "+P - paste before cursor from global clipboard;
+v y - copy selected text;  
+v p - paste after cursor;  
+v P - paste before cursor  
+v "+y - copy selected text to system clipboard  
+n "+p - paste after cursor from global clipboard;  
+n "+P - paste before cursor from global clipboard;  
 
 ## Plugins and lsp-specific commands
-n (space)ff - find files in current working directory;
-n (space)fh - find help;
-n (space)fy - find help;
-n (space)ht - toggle harpoon;
-n (space)ha - add current file to harpoon;
-n Ctrl+] - go to definition of keyword under cursor;
-n Ctrl+t - get back from definition as a result of Ctrl+];
-n grn - rename keyword under cursor;
-n gra - action for current "problem", given by lsp;
-n Ctrl+x Ctrl+o - omnicompletion;
-n Ctrl+x Ctrl+p - buffer completion;
-n Ctrl+x Ctrl+f - filename completion;
-n K - get description popup about under-cursor keyword;
-Ctrl+q - visual block;
+n (space)ff - find files in current working directory;  
+n (space)fh - find help;  
+n (space)fy - find help;  
+n (space)ht - toggle harpoon;  
+n (space)ha - add current file to harpoon;  
+n Ctrl+] - go to definition of keyword under cursor;  
+n Ctrl+t - get back from definition as a result of Ctrl+];  
+n grn - rename keyword under cursor;  
+n gra - action for current "problem", given by lsp;  
+n Ctrl+x Ctrl+o - omnicompletion;  
+n Ctrl+x Ctrl+p - buffer completion;  
+n Ctrl+x Ctrl+f - filename completion;  
+n K - get description popup about under-cursor keyword;  
+Ctrl+q - visual block;  
