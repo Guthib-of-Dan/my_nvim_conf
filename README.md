@@ -1,13 +1,15 @@
 # My personal NeoVim configuration 
 > But I'll put here complete setup of pc for coding. 
-It is suitable for WEB development (including react, tailwind, github actions), C++ development (but no debugger) and working in bare tty (linux without gui).
+It is suitable for WEB development (including react, tailwind, github actions, docker, python), C++ development (but no debugger) and working in bare tty (linux without gui).
 Plugins: lazy.nvim, tokyonight theme, native lsp, tree-sitter, telescope, harpoon.
 I should notice that on Linux if you want to default colors then run NeoVim as follows:
 "C=0 nvim ." - where "C" - environment variable meaning "COLORS"
 ## Setup on Windows
+0) for C++ development and tree-sitter it is recommended to have Visual Studio installed.
 1) Get chocolatey https://www.liquidweb.com/blog/how-to-install-chocolatey-on-windows/ (powershell stage is enough)
-2) Set up dependencies in powershell: "choco install git; choco install nodejs; choco install ripgrep; choco install fd; choco install neovim; choco install llvm"
-3) Reload your terminal and get LSP servers for NeoVim with powershell or cmd: "npm install -g @tailwindcss/language-server gh-actions-language-server vscode-langservers-extracted typescript typescript-language-server"
+2) Set up dependencies in powershell: "choco install git nodejs python ripgrep fd neovim llvm go;"
+2.1) Set up docker. "choco install docker-desktop" (this installation may freeze, so after several minutes you can just Ctrl+C and go to Program Files/Docker/Docker/Docker Desktop.exe). "choco install docker-cli"
+3) Reload your terminal and get LSP servers for NeoVim with powershell or cmd: "npm install -g @tailwindcss/language-server gh-actions-language-server vscode-langservers-extracted typescript typescript-language-server yaml-language-server dockerfile-language-server-nodejs basedpyright"
 3.5) I like using Bun as a package manager, so run: powershell -c "irm bun.sh/install.ps1|iex"
 4) run "mkdir ~/AppData/Local/nvim; cd ~/AppData/Local/nvim; git clone https://github.com/Guthib-of-Dan/my_nvim_conf.git ."  
 5) Install "MesloLGS NF" ttf files from some github and configure Windows Terminal (but if on Windows 10 - install it in Microsoft Store and then configure it)
@@ -112,5 +114,6 @@ n gra - action for current "problem", given by lsp;
 n Ctrl+x Ctrl+o - omnicompletion;  
 n Ctrl+x Ctrl+p - buffer completion;  
 n Ctrl+x Ctrl+f - filename completion;  
+i Ctrl+k - completion within some language structure (like function body, javascript object properties)  
 n K - get description popup about under-cursor keyword;  
 Ctrl+q - visual block;  
