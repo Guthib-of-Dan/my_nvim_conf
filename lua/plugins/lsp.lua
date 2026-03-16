@@ -25,13 +25,13 @@ return {
       vim.lsp.config("yamlls", {
         settings = {
           yaml = {
-            schemas = {
-              ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] =
-              { "docker-compose.yml", "docker-compose.yaml", "compose.yml", "compose.yaml" },
-            },
             validate = true,
             completion = true,
             hover = true,
+            schemaStore = {
+              enable = false,
+            },
+            schemas = require('schemastore').yaml.schemas()
           },
         },
       })
@@ -43,12 +43,10 @@ return {
       vim.lsp.enable("cssls")
       vim.lsp.enable("html")
       vim.lsp.enable("jsonls")
-      vim.lsp.enable("gh_actions_ls")
       vim.lsp.enable("protols")
       vim.lsp.enable("clangd")
       vim.lsp.enable("ts_ls")
       vim.lsp.enable("tailwindcss")
-      vim.lsp.enable('dockerls')
       vim.lsp.enable('yamlls')
 
       vim.api.nvim_create_autocmd('LspAttach', {
