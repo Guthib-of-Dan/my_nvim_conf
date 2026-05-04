@@ -1,4 +1,4 @@
-# My personal NeoVim configuration 
+# My personal NeoVim 0.12.2 configuration 
 > But I'll put here complete setup of pc for coding. 
 It is suitable for WEB development (including react, tailwind, github actions, docker, python), C++ development (but no debugger) and working in bare tty (linux without gui).
 Plugins: lazy.nvim, tokyonight theme, native lsp, tree-sitter, telescope, harpoon.
