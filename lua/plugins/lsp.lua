@@ -38,6 +38,11 @@ return {
       vim.lsp.config("neocmake", {
         capabilities = capabilities
       })
+
+      vim.lsp.config('rust_analyzer', {
+        cmd = { "rust-analyzer" }
+      }) 
+      vim.lsp.enable('rust_analyzer') 
       vim.lsp.enable('basedpyright')
       vim.lsp.enable("neocmake")
       vim.lsp.enable("cssls")
@@ -48,6 +53,7 @@ return {
       vim.lsp.enable("ts_ls")
       vim.lsp.enable("tailwindcss")
       vim.lsp.enable('yamlls')
+      vim.lsp.enable('sqls')
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(ev)
